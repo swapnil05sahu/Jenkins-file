@@ -6,7 +6,8 @@ pipeline {
         {
             steps 
             {
-                echo 'Hello World'
+                echo 'this is build '
+                echo 'this is build'
             }
         }
     }
