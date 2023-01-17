@@ -10,5 +10,21 @@ pipeline {
                 echo 'this is build'
             }
         }
+         stage('Hello') 
+        {
+            steps 
+            {
+                echo 'this is test '
+               
+            }
+        }
+         stage('Hello') 
+        {
+            steps 
+            {
+                echo 'this is deploy'
+                
+            }
+        }
     }
 }
