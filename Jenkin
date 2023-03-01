@@ -2,29 +2,28 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') 
-        {
-            steps 
-            {
-                echo 'this is build '
-                echo 'this is build'
+        stage('Build') {
+            steps {
+                echo 'Hello World'
             }
         }
-         stage('Hello') 
-        {
-            steps 
-            {
-                echo 'this is test '
-               
+        stage('Test') {
+            steps {
+                echo 'Hello World'
             }
         }
-         stage('Hello') 
-        {
-            steps 
-            {
-                echo 'this is deploy'
-                
+        stage('Deploy') {
+            steps {
+                echo 'Hello World'
             }
         }
     }
+  
+post 
+  {
+    always 
+    {
+      emailext body: 'summary', replyTo: '@gmail.com', subject: 'pipeline - notify', to: '@gmail.com'
+    }
+  }
 }
